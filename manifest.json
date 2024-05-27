@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Text to QR Code",
+    "version": "1.0",
+    "description": "Generate a QR code from selected text.",
+    "permissions": [
+      "contextMenus",
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
